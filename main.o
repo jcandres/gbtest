@@ -1,0 +1,24 @@
+XL
+H 9 areas 4 global symbols
+M lcc5190
+S _waitpad Ref0000
+S _waitpadup Ref0000
+S _printf Ref0000
+A _CODE size 35 flags 0
+S _main Def0000
+A _DATA size 0 flags 0
+A _OVERLAY size 0 flags 0
+A _ISEG size 0 flags 0
+A _BSEG size 0 flags 0
+A _XSEG size 0 flags 0
+A _GSINIT size 0 flags 0
+A _GSFINAL size 0 flags 0
+A _HOME size 0 flags 0
+T 00 00 01 00 00 78 EE 80 5F 16 81 79 D6 54 7B 9A
+R 00 00 00 00
+T 0E 00 D2 31 00 C5 C5 21 32 00 E5 CD 00 00 E8 04
+R 00 00 00 00 00 03 00 00 00 08 00 00 02 0C 02 00
+T 1C 00 C1 C5 3E 04 F5 33 CD 00 00 E8 01 C1 C5 CD
+R 00 00 00 00 02 09 00 00
+T 2A 00 00 00 C1 03 C3 03 00 C9 25 63 00
+R 00 00 00 00 02 02 01 00 00 07 00 00

@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.o *.lst *.map *.rel *.cdb *.ihx *.lnk *.sym *.asm"
+			],
+			"folder_exclude_patterns":
+			[
+				""
+			],
+			"follow_symlinks": true,
+			"path": "."
+		}
+	]
+}

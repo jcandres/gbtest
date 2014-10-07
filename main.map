@@ -1,0 +1,313 @@
+AREA .  .ABS.
+	RADIX HEX
+	BASE 0000
+	SIZE 0000
+	ATTRIB ABS OVR
+	GLOBALS
+		l__DATA	0000
+		l__HEAP	0000
+		l__BSEG	0000
+		l_.  .ABS.	0000
+		l__GSFINAL	0000
+		l__ISEG	0000
+		s_.  .ABS.	0000
+		s__HEADER	0000
+		l__XSEG	0000
+		.init	0000
+		l__OVERLAY	0000
+		l__LIT	0000
+		l__GSINIT	0000
+		l__GSINITTAIL	0001
+		l__BSS	0087
+		l__HEADER	01EB
+		s__CODE	0200
+		l__HOME	0486
+		l__CODE	08A8
+		s__HOME	0AA8
+		l__BASE	0E77
+		s__BASE	0F2E
+		s__GSINITTAIL	1DA5
+		s__LIT	1DA5
+		s__GSINIT	1DA5
+		s__GSFINAL	1DA6
+		.OAM	C000
+		s__DATA	C0A0
+		s__BSS	C0A0
+		s__HEAP	C127
+		s__BSEG	C127
+		s__ISEG	C127
+		s__XSEG	C127
+		s__OVERLAY	C127
+		.STACK	E000
+		.refresh_OAM	FF80
+AREA _CODE
+	RADIX HEX
+	BASE 0200
+	SIZE 08A8
+	ATTRIB REL CON
+	GLOBALS
+		_main	0200
+		__divschar_rrx_s	0235
+		__divschar_rrx_hds	023C
+		__modschar_rrx_s	0243
+		__modschar_rrx_hds	024A
+		__divsint_rrx_s	024F
+		__divsint_rrx_hds	025B
+		__modsint_rrx_s	0263
+		__modsint_rrx_hds	026F
+		__divuchar_rrx_s	0275
+		__divuchar_rrx_hds	027C
+		__moduchar_rrx_s	0283
+		__moduchar_rrx_hds	028A
+		__divuint_rrx_s	028F
+		__divuint_rrx_hds	029B
+		__moduint_rrx_s	02A3
+		__moduint_rrx_hds	02AF
+		.mod8	02B5
+		.div8	02B5
+		.mod16	02BD
+		.div16	02BD
+		.modu8	02F7
+		.divu8	02F7
+		.modu16	02FA
+		.divu16	02FA
+		_putchar	0337
+		_setchar	0340
+		_gotoxy	0349
+		_posx	0354
+		_posy	0365
+		.adv_gcurs	0376
+		.circle	0393
+		.horlin	0436
+		.verlin	046E
+		.circplot	04CA
+		.box	0548
+		.line	061E
+		.xonly	073F
+		.yonly	088E
+		.plot	08AF
+		.wrbyte	08CC
+		.getpix	094E
+		.wrtchr	0983
+		_gotogxy	09E7
+		_wrtchr	09F2
+		_getpix	0A07
+		_color	0A13
+		_circle	0A22
+		_box	0A3C
+		_line	0A60
+		_plot_point	0A78
+		_plot	0A8C
+AREA _HEADER
+	RADIX HEX
+	BASE 0000
+	SIZE 01EB
+	ATTRIB ABS OVR
+	GLOBALS
+		_exit	01D2
+AREA _HOME
+	RADIX HEX
+	BASE 0AA8
+	SIZE 0486
+	ATTRIB REL CON
+	GLOBALS
+		.set_mode	0AA8
+		.remove_VBL	0AB8
+		.remove_LCD	0ABE
+		.remove_TIM	0AC4
+		.remove_SIO	0ACA
+		.remove_JOY	0AD0
+		.add_VBL	0AD6
+		.add_LCD	0ADC
+		.add_TIM	0AE2
+		.add_SIO	0AE8
+		.add_JOY	0AEE
+		.remove_int	0AF4
+		.add_int	0B14
+		.wait_vbl_done	0B30
+		_wait_vbl_done	0B30
+		_display_off	0B47
+		.display_off	0B47
+		.serial_IO	0B68
+		_mode	0B97
+		_get_mode	0BA0
+		_enable_interrupts	0BA5
+		_disable_interrupts	0BA7
+		_reset	0BA9
+		.reset	0BA9
+		_set_interrupts	0BAF
+		_remove_VBL	0BBA
+		_remove_LCD	0BC5
+		_remove_TIM	0BD0
+		_remove_SIO	0BDB
+		_remove_JOY	0BE6
+		_add_VBL	0BF1
+		_add_LCD	0BFC
+		_add_TIM	0C07
+		_add_SIO	0C12
+		_add_JOY	0C1D
+		_clock	0C28
+		__printTStates	0C31
+		banked_call	0C32
+		banked_ret	0C4B
+		_printf	0C54
+		_sprintf	0C71
+AREA _BASE
+	RADIX HEX
+	BASE 0F2E
+	SIZE 0E77
+	ATTRIB REL CON
+	GLOBALS
+		.padup	0F2E
+		_waitpadup	0F2E
+		.jpad	0F3E
+		.wait_pad	0F6B
+		_joypad	0F72
+		_waitpad	0F77
+		font_copy_uncompressed	0F81
+		font_copy_compressed	0FB7
+		font_load	100C
+		font_copy_current	1054
+		font_set	109C
+		.put_char	10A9
+		.out_char	10C2
+		.del_char	10C9
+		_font_load	1124
+		_font_set	1132
+		_font_init	1141
+		_cls	1163
+		.cls	1163
+		.cr_curs	1195
+		.adv_curs	11AA
+		.tmode	1206
+		.tmode_out	122F
+		_font_load_ibm_fixed	123F
+		_font_ibm_fixed	1246
+		_font_ibm_fixed_tiles	1348
+		.gmode	1B48
+		.vbl	1BAA
+		.lcd	1BB5
+		.draw_image	1BC2
+		.switch_data	1BCC
+		_switch_data	1C03
+		_draw_image	1C1E
+		.y_table	1C31
+		.init_vram	1D51
+		.init_wtt	1D5F
+		.init_btt	1D6F
+		.init_tt	1D7D
+		.copy_vram	1D83
+		_get_data	1D92
+		_set_data	1D92
+AREA _LIT
+	RADIX HEX
+	BASE 1DA5
+	SIZE 0000
+	ATTRIB REL CON
+AREA _GSINIT
+	RADIX HEX
+	BASE 1DA5
+	SIZE 0000
+	ATTRIB REL CON
+	GLOBALS
+		gsinit	1DA5
+AREA _GSINITTAIL
+	RADIX HEX
+	BASE 1DA5
+	SIZE 0001
+	ATTRIB REL CON
+AREA _GSFINAL
+	RADIX HEX
+	BASE 1DA6
+	SIZE 0000
+	ATTRIB REL CON
+AREA _DATA
+	RADIX HEX
+	BASE C0A0
+	SIZE 0000
+	ATTRIB REL CON
+AREA _BSS
+	RADIX HEX
+	BASE C0A0
+	SIZE 0087
+	ATTRIB REL CON
+	GLOBALS
+		__cpu	C0A0
+		.mode	C0A1
+		__io_out	C0A2
+		__io_in	C0A3
+		__io_status	C0A4
+		.vbl_done	C0A5
+		__current_bank	C0A6
+		_sys_time	C0A7
+		.sys_time	C0A7
+		.int_0x40	C0A9
+		.int_0x48	C0B9
+		.int_0x50	C0C9
+		.int_0x58	C0D9
+		.int_0x60	C0E9
+		font_current	C0FC
+		font_first_free_tile	C0FF
+		font_table	C100
+		.curx	C112
+		.cury	C113
+		.fg_colour	C114
+		.bg_colour	C115
+AREA _HEAP
+	RADIX HEX
+	BASE C127
+	SIZE 0000
+	ATTRIB REL CON
+	GLOBALS
+		_malloc_heap_start	C127
+AREA _OVERLAY
+	RADIX HEX
+	BASE C127
+	SIZE 0000
+	ATTRIB REL CON
+AREA _ISEG
+	RADIX HEX
+	BASE C127
+	SIZE 0000
+	ATTRIB REL CON
+AREA _BSEG
+	RADIX HEX
+	BASE C127
+	SIZE 0000
+	ATTRIB REL CON
+AREA _XSEG
+	RADIX HEX
+	BASE C127
+	SIZE 0000
+	ATTRIB REL CON
+MODULES
+	FILE /opt/gbdk/lib/small/asxxxx/gb/crt0.o
+		NAME Runtime
+	FILE main.o
+		NAME lcc5190
+LIBRARIES
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE pad.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gbz80/gbz80.lib
+		MODULE printf.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gbz80/gbz80.lib
+		MODULE div.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE font.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE ibmfixed.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE drawing.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE init_tt.o
+	LIBRARY /opt/gbdk/lib/small/asxxxx/gb/gb.lib
+		MODULE cpy_data.o
+USERBASEDEF
+	_CODE=0x0200
+	_DATA=0xC0A0
+	_CODE_1=0x4000
+USERGLOBALDEF
+	.OAM=0xC000
+	.STACK=0xE000
+	.refresh_OAM=0xFF80
+	.init=0x0000
